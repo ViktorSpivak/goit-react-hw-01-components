@@ -1,19 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import card from "./styles/profile.module.css";
 
 const ProfileList = ({ followers, views, likes }) => (
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{followers}</span>
+  <ul className={card.stats}>
+    <li className={card.profileItem}>
+      <span className={card.label}>Followers</span>
+      <span className={card.quantity}>{followers}</span>
     </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">{views}</span>
+    <li className={card.profileItem}>
+      <span className={card.label}>Views</span>
+      <span className={card.quantity}>{views}</span>
     </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{likes}</span>
+    <li className={card.profileItem}>
+      <span className={card.label}>Likes</span>
+      <span className={card.quantity}>{likes}</span>
     </li>
   </ul>
 );
