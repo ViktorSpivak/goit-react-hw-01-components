@@ -1,17 +1,27 @@
 import React from "react";
+import PropTypes from "prop-types";
 import TransactionsTable from "./TransactionsTable";
 import style from "./styles/transaction.module.css";
 
 const Transaction = ({ transactions }) => (
-  <table align="center" width="600">
+  <table className={style.table}>
     <thead>
-      <tr bgcolor="lightseagreen" height="30">
-        <th width="200">Type</th>
-        <th width="200">Amount</th>
-        <th width="200">Currency</th>
+      <tr className={style.transactionsTitle}>
+        <th className={style.transactionCell}>Type</th>
+        <th className={style.transactionCell}>Amount</th>
+        <th className={style.transactionCell}>Currency</th>
       </tr>
     </thead>
-    <TransactionsTable transactions={transactions} />
+    <tbody>
+      {transactions.map((elem, idx) => (
+        <tr key={idx}>
+          <TransactionsTable {...elem} idx={idx} />
+        </tr>
+      ))}
+    </tbody>
   </table>
 );
+Transaction.propTypes = {
+  transactions: PropTypes.array
+};
 export default Transaction;

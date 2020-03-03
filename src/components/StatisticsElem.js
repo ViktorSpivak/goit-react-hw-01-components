@@ -1,14 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 import style from "./styles/statistics.module.css";
-const StatisticsElem = ({ stats }) =>
-  stats.map(
-    (elem, idx) =>
-      (elem = (
-        <li className={style.statisticsItem} key={idx}>
-          <span className={style.label}>{elem.label}</span>
-          <span className={style.percentage}>{elem.percentage}%</span>
-        </li>
-      ))
-  );
 
+const StatisticsElem = ({ id, label, percentage }) => (
+  <Fragment>
+    <span className={style.label}>{label}</span>
+    <span className={style.percentage}>{percentage}%</span>
+  </Fragment>
+);
+StatisticsElem.prototype = {
+  id: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number
+};
 export default StatisticsElem;

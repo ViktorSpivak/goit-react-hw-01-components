@@ -1,12 +1,18 @@
-import React from "react";
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 import style from "./styles/friendsList.module.css";
 
-const FriendCard = ({ friends }) =>
-  friends.map((elem, idx) => (
-    <li className={style.friendsItem} key={idx}>
-      <span className={elem.isOnline ? style.statusOn : style.statusOff}></span>
-      <img className={style.avatar} src={elem.avatar} alt="" width="48" />
-      <p className={style.name}>{elem.name}</p>
-    </li>
-  ));
+const FriendCard = ({ avatar, name, isOnline, id }) => (
+  <Fragment>
+    <span className={isOnline ? style.statusOn : style.statusOff}></span>
+    <img className={style.avatar} src={avatar} alt="" width="48" />
+    <p className={style.name}>{name}</p>
+  </Fragment>
+);
+FriendCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  id: PropTypes.number,
+  isOnline: PropTypes.bool,
+  avatar: PropTypes.string
+};
 export default FriendCard;

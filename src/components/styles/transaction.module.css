@@ -1,4 +1,18 @@
-.transaction-history {
+.table {
+  margin: 0 auto;
+}
+.transactionHistory {
   margin: 400px;
   background-color: lightseagreen;
+}
+.transactionLine {
+  text-align: center;
+  height: 30px;
+}
+.transactionsTitle {
+  composes: transactionLine;
+  background-color: lightseagreen;
+}
+.transactionCell {
+  width: 33%;
 }
