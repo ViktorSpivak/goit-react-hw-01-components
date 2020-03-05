@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import style from "./styles/friendsList.module.css";
+import style from "./friendsList.module.css";
 
 const FriendCard = ({ avatar, name, isOnline, id }) => (
   <Fragment>

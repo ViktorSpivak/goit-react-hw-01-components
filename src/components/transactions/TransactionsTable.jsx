@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import style from "./styles/transaction.module.css";
+import style from "./transaction.module.css";
 
 const TransactionsTable = ({ type, amount, currency, idx }) => {
   const colorLine = idx % 2 === 0 ? "white" : "lightcoral";

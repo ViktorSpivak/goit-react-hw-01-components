@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import card from "./styles/profile.module.css";
+import card from "./profile.module.css";
 
 const ProfileList = ({ followers, views, likes }) => (
   <ul className={card.stats}>

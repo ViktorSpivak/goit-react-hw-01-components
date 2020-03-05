@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import card from "./styles/profile.module.css";
+import card from "./profile.module.css";
 import ProfileList from "./ProfileList";
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
-  //   console.log(name);
   return (
     <div className={card.profile}>
       <div className={card.description}>

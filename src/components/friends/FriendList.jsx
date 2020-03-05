@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import FriendCard from "./FriendCard";
-import style from "./styles/friendsList.module.css";
+import style from "./friendsList.module.css";
 
 const FriendList = ({ friends }) => (
   <ul className={style.friendsList}>
@@ -14,10 +14,5 @@ const FriendList = ({ friends }) => (
 );
 FriendList.propTypes = {
   friends: PropTypes.array
-  // name: PropTypes.string.isRequired,
-  // tag: PropTypes.string,
-  // location: PropTypes.string.isRequired,
-  // avatar: PropTypes.string,
-  // stats: PropTypes.shape().isRequired
 };
 export default FriendList;

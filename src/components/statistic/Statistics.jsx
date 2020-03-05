@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StatisticsElem from "./StatisticsElem";
-import style from "./styles/statistics.module.css";
+import style from "./statistics.module.css";
 
 const StatisticsCard = ({ title, stats }) => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TransactionsTable from "./TransactionsTable";
-import style from "./styles/transaction.module.css";
+import style from "./transaction.module.css";
 
 const Transaction = ({ transactions }) => (
   <table className={style.table}>
