@@ -10,9 +10,7 @@ const StatisticsCard = ({ title, stats }) => {
 
       <ul className={style.statList}>
         {stats.map((elem, idx) => (
-          <li className={style.statisticsItem} key={idx}>
-            <StatisticsElem {...elem} />
-          </li>
+          <StatisticsElem {...elem} key={idx} />
         ))}
       </ul>
     </section>

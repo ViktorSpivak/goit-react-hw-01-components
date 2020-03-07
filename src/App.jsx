@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ProfileCard from "./components/profile/Profile";
 import user from "./data/user";
 import StatisticalCard from "./components/statistic/Statistics";
@@ -9,11 +9,11 @@ import Transaction from "./components/transactions/Transaction";
 import transactionData from "./data/transactions";
 
 const App = () => (
-  <Fragment>
+  <div>
     <ProfileCard {...user} />
     <StatisticalCard title="Upload stats" stats={statisticData} />
     <FriendList friends={friends} />
     <Transaction transactions={transactionData} />
-  </Fragment>
+  </div>
 );
 export default App;

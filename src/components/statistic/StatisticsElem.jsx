@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import style from "./statistics.module.css";
 
-const StatisticsElem = ({ id, label, percentage }) => (
-  <Fragment>
+const StatisticsElem = ({ label, percentage }) => (
+  <li className={style.statisticsItem}>
     <span className={style.label}>{label}</span>
     <span className={style.percentage}>{percentage}%</span>
-  </Fragment>
+  </li>
 );
 StatisticsElem.prototype = {
   id: PropTypes.string,

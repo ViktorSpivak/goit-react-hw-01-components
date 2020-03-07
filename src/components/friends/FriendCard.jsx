@@ -1,13 +1,13 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import style from "./friendsList.module.css";
 
-const FriendCard = ({ avatar, name, isOnline, id }) => (
-  <Fragment>
+const FriendCard = ({ avatar, name, isOnline }) => (
+  <li className={style.friendsItem}>
     <span className={isOnline ? style.statusOn : style.statusOff}></span>
-    <img className={style.avatar} src={avatar} alt="" width="48" />
+    <img className={style.avatar} src={avatar} alt="avatar" />
     <p className={style.name}>{name}</p>
-  </Fragment>
+  </li>
 );
 FriendCard.propTypes = {
   name: PropTypes.string.isRequired,
